@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="Очередной сайт, созданный при помощи TurboSite" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Басты бет - Паралель програмалау</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="jwplayer/jwplayer.js"></script>
+<meta name="generator" content="TurboSite 1.7.1" />
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>Паралель програмалау</h1>
+			<p></p>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li class="active"><a style="" href="index.html">Басты бет</a></li>
+
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+		<div id="content">
+			<div class="post">
+				<h2 class="title">Басты бет</h2>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					
+<P>Бірнеше процестерді параллель орындауға мүмкіндік беретін көп ядролы 
+машиналар дәуірінде .NET-тегі стандартты ағынды мүмкіндіктер енді жеткіліксіз 
+болды. Сондықтан TPL (Task Parallel Library) кітапханасы .NET құрылымына 
+қосылды, оның негізгі функционалдығы System.Threading.Tasks аттар кеңістігінде 
+орналасқан . Бұл кітапхана көппроцессорлы, көп ядролы жүйелермен жұмысты 
+жеңілдетеді. Ол сонымен қатар жаңа ағындарды жасау жұмысын жеңілдетеді. 
+Сондықтан стандартты құралдар мен Thread класы әлі де кеңінен қолданылғанымен, 
+көп ағынды қолданбаларды жасау үшін TPL және оның сыныптарын пайдалану 
+ұсынылады.</P>
+<P>TPL кітапханасы тапсырмалар тұжырымдамасына негізделген, олардың әрқайсысы 
+жеке ұзақ жұмыс істейтін операцияны сипаттайды. .NET сынып кітапханасында 
+тапсырма арнайы сынып, System.Threading.Tasks аттар кеңістігінде орналасқан Task 
+сыныбы арқылы ұсынылған . Бұл сынып ағындар пулындағы ағындардың бірінде 
+асинхронды түрде орындалатын жалғыз тапсырманы сипаттайды. Оны ағымдағы ағында 
+синхронды түрде іске қосуға болады.</P>
+<P>Тапсырманы анықтау және орындау үшін әртүрлі әдістерді қолдануға болады.</P>
+<P>Бірінші әдіс - Task нысанын жасау және оның Бастау әдісін шақыру:</P>
+<P>1<BR>2<BR>Task task = new Task(() =&gt; Console.WriteLine("Hello 
+Task!"));<BR>task.Start();<BR>Параметр ретінде Тапсырма нысаны Әрекет делегатын 
+қабылдайды, бұл біз осы делегатқа сәйкес келетін кез келген әрекетті, мысалы, 
+осы жағдайдағыдай лямбда өрнегін немесе қандай да бір әдіске сілтеме жасай 
+алатынымызды білдіреді. Яғни, бұл жағдайда тапсырма орындалған кезде консольде 
+«Hello Task!» жолы көрсетіледі.</P>
+<P>Ал әдіс Start()іс жүзінде тапсырманы бастайды.</P>
+<P>Екінші әдіс – Task.Factory.StartNew() статикалық әдісін пайдалану . Бұл әдіс 
+параметр ретінде қандай әрекет орындалатынын көрсететін Әрекет делегатын 
+қабылдайды. Дегенмен, бұл әдіс тапсырманы бірден бастайды:</P>
+<P>1<BR>Task task = Task.Factory.StartNew(() =&gt; Console.WriteLine("Hello 
+Task!"));<BR>Нәтижесінде әдіс орындалатын тапсырманы қайтарады.</P>
+<P>Тапсырмаларды анықтау және іске қосудың үшінші жолы статикалық Task.Run() 
+әдісін пайдалану болып табылады :</P>
+<P>1<BR>Task task = Task.Run(() =&gt; Console.WriteLine("Hello Task!"));<BR>Әдіс 
+Task.Run()параметр ретінде әрекет делегатын қабылдай алады - орындалатын әрекет 
+және Task нысанын қайтарады.</P>
+
+				</div>
+			</div>
+		<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Кіріспе</h2>
+					<ul>
+					<li class="active"><a style="" href="index.html">Басты бет</a></li>
+<li><a style="" href="page1.html">1-Бөлім.Параллель программалау. Программалау тілдері.</a></li>
+<li><a style="" href="page2.html">2-Бөлім.MPI – хабар  беру  интерфейсі</a></li>
+<li><a style="" href="page3.html">3-Бөлім.Параллель алгоритмдерді ғылыми есептер шешуге қолдану</a></li>
+<li><a style="" href="page4.html">4-Бөлім.Кескіндерді өңдеу типтері.</a></li>
+
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer">
+		<p> | <a href="http://www.freecsstemplates.org/">Free CSS Templates</a> | <a href="http://brullworfel.ru/turbosite">TurboSite</a></p>
+	</div>
+	<!-- end #footer -->
+</body>
+</html>

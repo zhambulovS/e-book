@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="Очередной сайт, созданный при помощи TurboSite" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>3-Бөлім.Параллель алгоритмдерді ғылыми есептер шешуге қолдану - Паралель програмалау</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="jwplayer/jwplayer.js"></script>
+<meta name="generator" content="TurboSite 1.7.1" />
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>Паралель програмалау</h1>
+			<p></p>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a style="" href="index.html">Басты бет</a></li>
+
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+		<div id="content">
+			<div class="post">
+				<h2 class="title">3-Бөлім.Параллель алгоритмдерді ғылыми есептер шешуге қолдану</h2>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					<STRONG>Параллель&nbsp;алгоритмдерді&nbsp;ғылыми&nbsp;есептер&nbsp;шешуге&nbsp;қолдану.&nbsp;<SPAN 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'></SPAN></STRONG> 
+
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp;<B>BSP-жалпы&nbsp;синхронды&nbsp;параллелизм</B></P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BSP&nbsp;(BULK&nbsp;SYNCHRONOUS&nbsp;PARALLEL)&nbsp;Жалпы&nbsp;синхронды&nbsp;параллелизм&nbsp;моделі</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>синхронды&nbsp;өзара&nbsp;әрекеттесуден&nbsp;бөліп&nbsp;алынған&nbsp;және&nbsp;жады&nbsp;иерерхиясының&nbsp;әсері&nbsp;және&nbsp;&nbsp;хабар</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>алмасу 
+ескерілген.&nbsp;BSP&nbsp;моделі&nbsp;уш&nbsp;компанненттен&nbsp;тұрады:</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>1&nbsp;Жергілікті&nbsp;жадысы&nbsp;бар 
+және&nbsp;бірдей&nbsp; жыладмдықпен&nbsp;істейтін&nbsp;процессорлар</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>1&nbsp;Процессорлардың&nbsp;өзара&nbsp;әрекеттесуіне&nbsp;мүмкіншілік&nbsp;беретін&nbsp;байланыс&nbsp;желісі;</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>1&nbsp;Барлық&nbsp;процессорлардың&nbsp;белгілі&nbsp;уақыт&nbsp;аралықтары&nbsp;арқылы&nbsp;синхрондау&nbsp;механизмі;</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Модель&nbsp;&nbsp;&nbsp;параметрлері&nbsp;&nbsp;&nbsp;ретінде&nbsp;&nbsp;&nbsp;процессорлар&nbsp;&nbsp;&nbsp;саны,олардың&nbsp;&nbsp;&nbsp;жылдамдығы,</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>өзараәркеттесу&nbsp;бағасы&nbsp;және&nbsp;синхрондау 
+пероды.</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BSP&nbsp;-дегі&nbsp;есептеу&nbsp;асақадамдар&nbsp;тізбегінен&nbsp;тұрады.&nbsp;әрбір&nbsp;жеке&nbsp;қадамда&nbsp;процессорлар</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>есептеулерді&nbsp;&nbsp;&nbsp;орындайды,&nbsp;&nbsp;&nbsp;олар&nbsp;&nbsp;&nbsp;жергілікті&nbsp;&nbsp;&nbsp;жадыны&nbsp;&nbsp;&nbsp;шақырады&nbsp;&nbsp;&nbsp;және&nbsp;&nbsp;&nbsp;басқа&nbsp;&nbsp;&nbsp;процессорлерге</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>хабар&nbsp;жібереді.&nbsp;Хабар&nbsp;көшірме&nbsp;алуға&nbsp;сұрау&nbsp;немесе&nbsp;қашықтағы&nbsp;деректерді&nbsp;жаңартуға&nbsp;сұрау</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>болады.&nbsp;&nbsp;&nbsp;Асақадам&nbsp;&nbsp;&nbsp;соңында&nbsp;&nbsp;&nbsp;процессорлар&nbsp;&nbsp;&nbsp;барьерлік&nbsp;&nbsp;&nbsp;синхрондауды&nbsp;&nbsp;&nbsp;орындайды&nbsp;&nbsp;&nbsp;және&nbsp;&nbsp;&nbsp;одан</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>кейін&nbsp;осы&nbsp;асақадам&nbsp;бойындағы&nbsp;сұрауды&nbsp;өңдейді.&nbsp;Ары&nbsp;қарай&nbsp;процессорлар&nbsp;келесі&nbsp;асақадамды</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>орындай&nbsp;бастайды.</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BSP&nbsp;кітапханасы&nbsp;20&nbsp;шақты&nbsp;функциядан&nbsp;тұрады,&nbsp;онда&nbsp;хабар&nbsp;алмасудың&nbsp;BSP&nbsp;стилін</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>және&nbsp;жадыға&nbsp;қашықтан&nbsp;қатынау&nbsp;қамтамасыз&nbsp;етіледі.</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp; 
+&nbsp; &nbsp; &nbsp;&nbsp;BSP&nbsp;моделінің&nbsp;параметрі:</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp;<SPAN>&nbsp;</SPAN><A 
+style="TEXT-DECORATION: none" 
+href="https://melimde.com/melimetter-orin-basaru-jjesi-mbj-bl.html">&nbsp; 
+&nbsp; &nbsp;&nbsp;p- процессорлар&nbsp;саны</A>;</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l-&nbsp;синхрондау&nbsp;периодтылығы,&nbsp;синхрондау&nbsp;амалдары&nbsp;арасындағы&nbsp;уақыт&nbsp;бойынша</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>қадамдарыны”&nbsp;минималды&nbsp;саны;</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp;<SPAN>&nbsp;</SPAN><A 
+style="TEXT-DECORATION: none" 
+href="https://melimde.com/e-ondi-b-jzdik-v-midi-kobejtindini-meni-bolindini-meninen-nesh.html">&nbsp; 
+&nbsp; &nbsp;g- байланыс&nbsp;бағасы</A>;</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp; 
+&nbsp; &nbsp; &nbsp;s- секуындына&nbsp;қадам 
+санымен&nbsp;өлшенетін&nbsp;процессор&nbsp;жылдамдығы.</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Байланыс&nbsp;бағасы&nbsp;һ&nbsp;өзараәрекеттесуде&nbsp;һ&nbsp;хабар&nbsp;жіберуге&nbsp;қажетті&nbsp;уақыт&nbsp;саны&nbsp;ретінде</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>анықталады.</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp; 
+&nbsp; &nbsp; 
+&nbsp;Уақыт&nbsp;пен&nbsp;бағасы&nbsp;келесі&nbsp;формуламен&nbsp;беріледі:</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp; 
+&nbsp; &nbsp; &nbsp;Tsuperster=Wmax+ghmax+l</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>мұндағы&nbsp;&nbsp;&nbsp;Wmax&nbsp;&nbsp;&nbsp;-кез&nbsp;&nbsp;&nbsp;келген&nbsp;&nbsp;&nbsp;''вертуальды''&nbsp;&nbsp;&nbsp;процессорлар&nbsp;&nbsp;&nbsp;орындайтын&nbsp;&nbsp;&nbsp;жергілікті</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>амалдардың&nbsp;&nbsp;&nbsp;максималь&nbsp;&nbsp;&nbsp;саны&nbsp;&nbsp;&nbsp;(процесспен&nbsp;&nbsp;&nbsp;немесе&nbsp;&nbsp;&nbsp;ағынмен),&nbsp;&nbsp;&nbsp;процессор&nbsp;&nbsp;&nbsp;жібергеннемесе</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>қабалдаған&nbsp;максимальды&nbsp;хабарлар&nbsp;саны.&nbsp;Программаның&nbsp;аяқталуына&nbsp;қажетті&nbsp;жалпы&nbsp;уақыт</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>қадамдар&nbsp;&nbsp;&nbsp;саны&nbsp;&nbsp;&nbsp;түрінде&nbsp;&nbsp;&nbsp;беріледі.&nbsp;&nbsp;&nbsp;Берілген&nbsp;&nbsp;&nbsp;уақытты&nbsp;&nbsp;&nbsp;азайту&nbsp;&nbsp;&nbsp;үшін&nbsp;&nbsp;&nbsp;асақадам&nbsp;&nbsp;&nbsp;санын&nbsp;&nbsp;&nbsp;азайту</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>керек,өйткені&nbsp;олардың&nbsp;әрбіреуі&nbsp;үшін&nbsp;1синхрондау&nbsp;уақыты&nbsp;қажет.&nbsp;Сондай-ақ&nbsp;һжәне&nbsp;w-ні&nbsp;де</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>азайту&nbsp;керек.&nbsp;Ол&nbsp;үшін&nbsp;жүктелгендерді&nbsp;үлестіру&nbsp;керек&nbsp;жәнепроцессорлар&nbsp;арасында&nbsp;хабарлар</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>беруді&nbsp;&nbsp;&nbsp;баланстау&nbsp;&nbsp;&nbsp;керек,&nbsp;&nbsp;&nbsp;сондай-ақ&nbsp;&nbsp;&nbsp;жүктелгендерді&nbsp;&nbsp;&nbsp;үлестіру&nbsp;&nbsp;&nbsp;керек&nbsp;&nbsp;&nbsp;және&nbsp;&nbsp;&nbsp;процессорлар</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>арасындағы&nbsp;есептеулерді&nbsp;баланстау&nbsp;керек.</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BSP&nbsp;&nbsp;&nbsp;программаларды&nbsp;&nbsp;&nbsp;орындаудың&nbsp;&nbsp;&nbsp;қарапайым&nbsp;&nbsp;&nbsp;шаблондарын&nbsp;&nbsp;&nbsp;Oxford&nbsp;&nbsp;&nbsp;BSP</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>libraryтабуға&nbsp;болады:</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp; 
+&nbsp; &nbsp;&nbsp;Bspstart(),&nbsp;bspfinish()&nbsp;-<SPAN>&nbsp;</SPAN><A 
+style="TEXT-DECORATION: none" 
+href="https://melimde.com/ondiristik-processterdi-avtomattandirilfan-basaru.html">процесстерді&nbsp; 
+басқару</A>;</P>
+<P 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>&nbsp; 
+&nbsp; &nbsp;&nbsp;Bspstep(), bspstep_end()<SPAN>&nbsp;</SPAN><A 
+style="TEXT-DECORATION: none" 
+href="https://melimde.com/brmalau-kozderi-kvanttau-shui-kezdejso-ifisudi-sinhrondau-arna.html">- 
+синхрондау</A>;</P><BR 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>
+<HR 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>
+
+<DIV id=page36-div 
+style='FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'><BR>&nbsp; 
+&nbsp; &nbsp;&nbsp;Bspfetch(),&nbsp;bspstore()&nbsp;- байланыс.&nbsp; 
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BSP&nbsp;модель&nbsp;PVM&nbsp;машина&nbsp;принципімен&nbsp;жұмыс&nbsp;істейді.&nbsp;Бұл&nbsp;модель&nbsp;Linux&nbsp;операциялық</P>
+<P>жүйесіне&nbsp;орнатылған,&nbsp;программалау&nbsp;үшін&nbsp;С++&nbsp;программалау 
+тілі&nbsp;қолданылады.<BR></P></DIV>
+
+				</div>
+			</div>
+		<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Кіріспе</h2>
+					<ul>
+					<li><a style="" href="index.html">Басты бет</a></li>
+<li><a style="" href="page1.html">1-Бөлім.Параллель программалау. Программалау тілдері.</a></li>
+<li><a style="" href="page2.html">2-Бөлім.MPI – хабар  беру  интерфейсі</a></li>
+<li class="active"><a style="" href="page3.html">3-Бөлім.Параллель алгоритмдерді ғылыми есептер шешуге қолдану</a></li>
+<li><a style="" href="page4.html">4-Бөлім.Кескіндерді өңдеу типтері.</a></li>
+
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer">
+		<p> | <a href="http://www.freecsstemplates.org/">Free CSS Templates</a> | <a href="http://brullworfel.ru/turbosite">TurboSite</a></p>
+	</div>
+	<!-- end #footer -->
+</body>
+</html>
